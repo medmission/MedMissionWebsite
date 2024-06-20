@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MedMission</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Habibi&display=swap');
+    </style>
+</head>
+<body>
+   <div class="footerflex"> 
+    <header>
+        <a href="index.html" id="title"><strong>MedMission</strong></a>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Our Goal</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="involved.html">Get Involved</a></li>
+                    <li><a href="recent.html">Recent Trips</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <img id="contactimg" src="https://medicalpracticespecialists.com/wp-content/uploads/2013/04/contact.jpg" alt="Medical Supplies">
+            <h2>Contact Us</h2>
+            <p id="questions">Feel free to send us any questions, comments, or concerns.</p>
+            <form action="send-email.php" method="post">
+                <input type="text" name="name" class="form" placeholder="Name*" required>
+                <input type="email" name="email" class="form" placeholder="Email*" required>
+                <textarea name="message" placeholder="Message" class="form"></textarea>
+                <div id="button"> 
+                    <button type="submit" class="btn"><strong>Send Message</strong></button>
+                </div>
+            </form>
+        </div>
+    </section>
+   </div> 
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 MedMission. All rights reserved.</p>
+    </footer>
+</body>
+</html>
