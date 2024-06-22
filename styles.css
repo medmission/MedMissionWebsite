@@ -231,8 +231,8 @@ form{
     flex-direction: column;
     font-family: "Habibi", serif;
     text-align: center;
-    padding-left: 9%;
-    padding-right: 9.5%;
+    padding-left: 8.601vw;
+    padding-right: 8.601vw;
     font-size: 1.25vw; 
 }
 
@@ -759,3 +759,102 @@ h4{
     width: 100%; 
 }
 
+footer {
+    background: linear-gradient(to right, #2e8b57, #3b5998);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Montserrat', serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    margin: 10px 20px;
+}
+
+.footer-section h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-section.contact-info a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.footer-section.subscribe p {
+    font-size: 1em;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.footer-section.subscribe form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-section.subscribe input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-section.subscribe button {
+    padding: 10px 20px;
+    border: 2px solid #3b5998;
+    border-radius: 5px;
+    background-color: #3b5998;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.8s, border-color 0.8s, color 0.8s;
+}
+
+.footer-section.subscribe button:hover {
+    background-color: #fff;
+    border-color: #3b5998;
+    color: #3b5998;
+}
+
+.footer-section.copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+nav {
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
+}
