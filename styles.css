@@ -4,7 +4,7 @@
     flex-direction: column;
 }
 
-section{
+.section{
     margin: 30px;
 }
 nav{
@@ -21,7 +21,7 @@ nav{
 h2{
     font-family: "Habibi", serif;
 }
-#title{
+.title{
     justify-content: left;
     text-align: left;
     align-items: left;
@@ -47,7 +47,25 @@ h2{
     text-align: center;
 }
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #7FB5B5;
+    z-index: 1000;
+}
+#homehead {
+    position: relative;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -55,6 +73,12 @@ body {
     padding: 0 20px;
 }
 
+#contact{
+    margin: 30px;
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    height: 100vh; /* Full viewport height to center vertically */
+}
 header {
     background-color: #7FB5B5;
     opacity: .9;
@@ -89,7 +113,7 @@ nav ul li a {
     background-size: cover;
     color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding: 100px 10px;
 }
 
 .hero h1 {
@@ -102,8 +126,9 @@ nav ul li a {
     box-shadow: none;
 }
 
-.hero p {
-    font-size: 1.5rem;
+#main-p {
+    font-size: 1.7vw;
+    line-height: 2.4vw;
     margin-bottom: 30px;
 }
 
@@ -180,9 +205,10 @@ form{
 
 #story{
     font-family: monospace;
-    line-height: 25px;
+    line-height: 2vw;
     margin-top: 2%;
     margin-left: 30px;
+    font-size: 1vw;
 }
 
 #storyline{
@@ -191,12 +217,12 @@ form{
 }
 
 #storyh{
-    padding-top: 70px;
-    padding-left: 100px;
-    padding-right: 360px;
+    padding-top: 3vw;
+    padding-left: 6vw;
+    padding-right: 17vw;
     border-radius: 6px;
     background-color: #224a43;
-    font-size: 30px;
+    font-size: 1.6vw;
     margin-right: 10px;
     color: white;
 }
@@ -216,14 +242,19 @@ form{
     display: inline-flex;
 }
 
+
+#krishiv{
+    opacity: .7;
+}
+
 .aimg{
     border-radius: 6px;
-    width: 29%;
+    width: 23vw;
     margin: 10px;
     height: auto;
     justify-content: center;
-    margin-left: 50px;
     opacity: .75;
+    margin: 4vw;
 }
 
 .teams {
@@ -231,11 +262,25 @@ form{
     flex-direction: column;
     font-family: "Habibi", serif;
     text-align: center;
-    padding-left: 8.601vw;
-    padding-right: 8.601vw;
-    font-size: 1.25vw; 
+    font-size: 1.2vw; 
+    padding: 8.5vw;
+    padding-top: .5vh;
+    padding-bottom: .5vh;
 }
 
+#sendmessage {
+    font-size: 1vw;
+    margin: 0 auto;
+}
+
+#shaanteam{
+    padding-left: 9vw;
+    padding-right: 10vw;
+}
+
+#shaan{
+    margin: 5vw;
+}
 
 #aboutfillimg{
     display: block;
@@ -253,13 +298,11 @@ form{
 #teamp{
     opacity: .5;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    line-height: 25px;
-    font-size: 16px;
+    line-height: 2vw;
+    font-size: 1.2vw;
     text-align: left;
     width: 45vw;
     margin: 0 auto;
-    font-size: 16px;
-    line-height: 30px;
     margin-top: 50px;
     margin-bottom: 40px;
 }
@@ -289,8 +332,8 @@ form{
 #main-p{
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.3vw;
-    line-height: 3vh;
+    font-size: 1.7vw;
+    line-height: 2.3vw;
     padding-bottom: 10px;
     padding-right: 0;
     margin: 20px;
@@ -302,9 +345,9 @@ form{
 
 #donatebtn{
     background-color: #295f56;
-    height: 3.3vh;
-    width: 5vw;
     text-align: center;
+    font-size: 1vw;
+    margin: 0 auto;
 }
 
 #inline{
@@ -346,7 +389,8 @@ form{
 
 #goalp {
     text-align: center;
-    line-height: 25px;
+    line-height: 3vw;
+    font-size: 1.5vw;
     font-family: 'Courier New', Courier, monospace;
     width: 45%;
     margin: 0 auto;
@@ -355,7 +399,7 @@ form{
 
 #goalh {
     text-align: center;
-    font-size: 2em;
+    font-size: 4vw;
     margin-top: 50px;
     margin-bottom: 60px;
 }
@@ -383,7 +427,7 @@ form{
 
 #hih{
     text-align: center;
-    font-family: monospace;
+    font-family: "Montserrat", sans-serif;
     border-radius: 5px;
     padding: 30px;
     width: 75%;
@@ -401,6 +445,7 @@ h4{
     font-family: 'Times New Roman', Times, serif;
 }
 .inlinehih{
+    display: block; 
     margin: 0 auto;
     margin-top: 20px;
     padding: 30px;
@@ -478,7 +523,7 @@ h4{
 
 #behind {
     margin: 0 auto;
-    width: 80vx;
+    width: 80vw;
     border-radius: 7px;
 }
 
@@ -511,6 +556,14 @@ h4{
     margin-bottom: 20vh;
     background-color: rgba(0, 0, 0, .765);
     flex-direction: column;
+}
+
+#onet{
+    margin-top: 0;
+}
+
+#threet{
+    margin-bottom: 5vh;
 }
 
 #onet::before, #twot::before, #threet::before {
@@ -559,6 +612,8 @@ h4{
 #giheader {
     font-size: 4vw;
     font-family: "Montserrat", sans-serif;
+    margin-bottom: 0;
+    margin-top: 20px;
 }
 
 .gi3 {
@@ -611,12 +666,14 @@ h4{
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
-    font-size: .95vw;
+    font-size: 1.5vw;
     margin-top: 30px;
     margin-bottom: 30px;
-    line-height: 25px;
+    line-height: 3.25vh;
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
+    padding: 30px;
+    clear: both;
 }
 
 .container {
@@ -627,21 +684,8 @@ h4{
     max-width: 1600px;
     margin: 0 auto;
     background-color: whitesmoke;
-}
-
-#img1 {
-    max-width: 1000px;
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-}
-
-#img2{
-    float: right;
-}
-
-#img4{
-    height: 30vw;
+    padding: 20px;
+    margin-bottom: 30px;
 }
 
 .learnmore {
@@ -667,25 +711,28 @@ h4{
     color: black;
 }
 
-.recentps {
-    clear: both;
+#img1 {
+    max-width: 1000px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 #img2 {
     float: right;
-    margin: 30px;
+    margin: 1vw;
     height: 15vw;
 }
 
 #img3 {
     float: left;
-    margin: 30px;
+    margin: 1vw;
     height: 15vw;
 }
 
 #img4 {
     float: right;
-    margin: 30px;
+    margin: 1vw;
     width: 23vw;
     height: auto;
 }
@@ -720,7 +767,7 @@ h4{
 .donateh{
     text-align: left;
     font-family: sans-serif;
-    font-size: 2vw;
+    font-size: 30px;
 }
 
 .learnp{
@@ -855,6 +902,59 @@ footer {
     font-weight: 400;
 }
 
+@media (max-width: 1000px) {
+    .teams {
+        display: none;
+    }
+
+    nav {
+        font-size: 1.5vw;
+    }
+
+    .title {
+        font-size: 3.3vw;
+    }
+
+    .aimg {
+        margin-left: 30px;
+        margin-right: 10px;
+        width: 24vw;
+    }
+    
+    #aboutimg {
+        margin-left: 30vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hihdown{
+        width: 60vw;
+    }
+
+    #goal{
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 700px){
+    .hihp{
+        line-height: 2.7vw;
+        font-size: 2.1vw; 
+    }
+    .donatebtn{
+        padding: 1px;
+    }
+
+    #hero {
+        width: 30vw;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    html{
+        overflow-x: hidden;
+    }
+}
 nav {
     box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
 }
