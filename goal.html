@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recent Trip - MedMission</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="https://static.wixstatic.com/media/877939_5d2aa84ff190450291170d79060213f5~mv2.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Habibi&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kaushan+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <script src="script.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="index.html" class="title"><strong>MedMission</strong></a>
+            <div class="container">
+                <nav> 
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="goal.html">Our Goal</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="involved.html">Get Involved</a></li>
+                        <li><a href="recent.html">Recent Trips</a></li>
+                    </ul>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>        
+        </header>
+        <div class="overlay" id="overlay">
+            <button id="closeBtn">&times;</button>
+            <ul id="mobile-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="goal.html">Our Goal</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="involved.html">Get Involved</a></li>
+                <li><a href="recent.html">Recent Trips</a></li>
+            </ul>
+        </div>
+        <section id="goal">
+            <h2 id="goalh">Our Goal</h2>
+            <p id="goalp">Our mission is to connect medical offices and medical missions by collecting unwanted supplies and expired medications. By providing these resources to medical missions, we aim to improve their medical results and make a positive impact in economically challenged nations. Donations from medical offices are crucial as these nations often struggle to meet their healthcare needs.<br>To achieve our goal, we reach out to medical offices, explaining our mission and requesting their assistance. Once they agree to contribute, we will collect and categorize the donated items to ensure their suitability for medical missions. It is vital we check each and every expired medication and make sure they are within the guidelines of the area we are donating to. We will establish partnerships with reputable medical missions or organizations working in economically challenged areas to distribute these resources effectively.<br>Logistics and shipping arrangements will be carefully managed to ensure the safe and timely delivery of the donated items. Regular communication with medical missions and the communities they serve will help us understand their specific needs and assess the impact of our donations.<br>Maintaining strong relationships with medical offices and medical missions is crucial for ongoing support.  Through our efforts, we aim to bridge the healthcare gap and improve access to quality healthcare in economically challenged nations.</p>
+        </section>
+        <section id="partners" class="section">
+            <h2>Our Partners</h2>
+            <div class="partners-container">
+                <div class="partner">
+                    <div class="logo-container">
+                        <img src="YourFamilyWalkInClinic_Logo.png" alt="Partner 1" class="partner-logo">
+                        <div class="partner-overlay">
+                            <div class="overlay-text">17929 Hunting Bow Circle, Lutz, FL</div>
+                        </div>
+                    </div>
+                    <p class="description"><strong>Your Family Walk-In Clinic</strong> located in Lutz specializes in urgent care and primary care for both adults and children. You can rely on our urgent care clinic to offer you better and more economical healthcare. The full-service practice we provide is for the entire family. Our clinic's professional staff is comforting and attentive to the needs of our patients.</p>
+                </div>
+                <div class="partner">
+                    <div class="logo-container">
+                        <img src="MedicalAssociatesOfWestFlorida_logo.png" alt="Partner 2" class="partner-logo">
+                        <div class="partner-overlay">
+                            <div class="overlay-text">7575 State Road 52, Bayonet Point, FL</div>
+                        </div>
+                    </div>
+                    <p class="description">Medical Associates of West Florida is comprised of a group of Pasco county primary care physicians who came together in 1998 to provide superior comprehensive medical care to patients in West Pasco county. We are committed to providing a global approach to maintaining good health and diagnosing illnesses.  If needed, we direct patients to the finest specialists and sub specialists in the region while carefully coordinating quality patient care.</p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section contact-info">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>Email: <a href="mailto:medmission23@gmail.com">medmission23@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section menu">
+                    <h4>Main Menu</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="goal.html">Our Goal</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="involved.html">Get Involved</a></li>
+                        <li><a href="recent.html">Recent Trips</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section subscribe">
+                    <h4>Subscribe</h4>
+                    <p>Get the newest updates</p>
+                    <form action="https://formspree.io/f/xvgpgwvr" method="post">
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                        <button id="submission" type="submit">Subscribe</button>
+                    </form>
+                </div>
+                <div class="footer-section copyright">
+                    <p>&copy; 2024 MedMission. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>
+
