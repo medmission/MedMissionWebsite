@@ -4,20 +4,19 @@ document.addEventListener("DOMContentLoaded", function() {
     const closeBtn = document.getElementById("closeBtn");
 
     hamburger.addEventListener("click", function() {
-        overlay.style.display = "flex"; // Ensure the overlay is displayed
+        overlay.style.display = "flex"; 
         setTimeout(() => {
-            overlay.classList.add("active"); // Add active class to start the slide-in transition
-        }, 10); // Delay slightly to allow for display update
+            overlay.classList.add("active"); 
+        }, 10); 
     });
 
     closeBtn.addEventListener("click", function() {
-        overlay.classList.remove("active"); // Remove active class to start the slide-out transition
+        overlay.classList.remove("active"); 
         setTimeout(() => {
-            overlay.style.display = "none"; // Hide the overlay after the transition
-        }, 300); // Match the transition duration
+            overlay.style.display = "none"; 
+        }, 300); 
     });
 
-    // Close the overlay when clicking outside of the menu
     overlay.addEventListener("click", function(event) {
         if (event.target === overlay) {
             overlay.classList.remove("active");
@@ -66,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let navWorking = false;
 
-    // Add an event listener to the hamburger menu
+
     hamburger.addEventListener('click', function() {
         if (mobileNav.style.display === "none" || mobileNav.style.display === "") {
             mobileNav.style.display = "block";
@@ -77,7 +76,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // After the first click, check if the nav is working
     hamburger.addEventListener('click', function() {
         setTimeout(function() {
             if (!navWorking) {
@@ -133,21 +131,13 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         dots[slideIndex - 1].className += " active";
         
-        setTimeout(showSlides, 3000); // Change image every 3 seconds
+        setTimeout(showSlides, 3000); 
     }
 
     showSlides();
-    
-    // For manual dot control
+ 
     window.currentSlide = function(n) {
         slideIndex = n - 1;
         showSlides();
     }
 });
-
-window.onload = function() { 
-    var el = document.getElementById('g-recaptcha-response'); 
-    if (el) { 
-      el.setAttribute('required', 'required'); 
-    } 
-  }
