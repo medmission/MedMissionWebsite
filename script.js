@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
     hamburger.addEventListener('click', function() {
         setTimeout(function() {
             if (!navWorking) {
-                alert("The navigation menu is currently down. Please use the links in the footer to navigate.");
+                alert("The navigation menu is currently down. Please use the links in the footer to navigate. Come back later.");
             }
         }, 500);
     });
