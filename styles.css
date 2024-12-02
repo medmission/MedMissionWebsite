@@ -83,12 +83,15 @@ html {
 }
 
 #donation-banner {
-    background-color: #005959; /* Darker teal */
+    background-color: #006666; /* Slightly darker teal */
     color: white;
     text-align: center;
     padding: 10px 20px;
     font-size: 0.9rem; /* Smaller font size */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Make it sticky */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 100000; /* Ensure it stays above other elements */
 }
 
 header {
