@@ -1667,6 +1667,17 @@ nav ul li:hover a {
     right: 10px;
 }
 
+.partner-logo1{
+    font-family: 'Montserrat', serif;
+}
+
+#donationtrips{
+    font-style: italic;
+    font-family: 'Montserrat', serif;
+    text-align: center;
+    font-weight: 300;
+}
+
 @media (max-width: 720px) {
     #hamburgerhome{
         top: 10vh;
@@ -2056,4 +2067,3 @@ nav ul li:hover a {
 #threeo{
     margin-left: 190vw;
 }
-
