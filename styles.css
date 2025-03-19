@@ -2067,3 +2067,95 @@ nav ul li:hover a {
 #threeo{
     margin-left: 190vw;
 }
+
+.gradientbio {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, #224A43, #A8D5C8);
+}
+
+.hero-slider {
+    margin: auto;
+    width: 80%;
+    height: 65vh;
+    overflow: hidden;
+}
+
+.hero-slider .carousel-cell {
+    width: 100%;
+    height: 90%;
+    display: flex;
+}
+
+.hero-slider .carousel-cell .info-container {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    position: relative;
+}
+
+.hero-slider .carousel-cell .info-container h1 {
+    font-size: 3.2em;
+    line-height: 1.0;
+    margin: 0;
+    padding-top: 25px;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-slider .carousel-cell .info-container .quote {
+    background: transparent;
+    font-size: 1em;
+    font-style: italic;
+    color: #fff;
+    padding-top: 5px;
+    text-align: center;
+
+}
+
+.hero-slider .carousel-cell .info-container .biotext {
+    position: absolute;
+    font-size: 1.5em;
+    line-height: 1.0;
+    padding: 3% 1% 1% 10%;
+    margin-left: 150px;
+    color: #000;
+    text-align: center;
+}
+
+.hero-slider .carousel-cell .info-container .picture {
+    position: absolute;
+    padding: 2%;
+    display: flex;
+    max-width: 100%;
+    max-height: 60%;
+    object-fit: contain;
+    margin-top: 2%;
+}
+
+.flickity-button {
+    display: none;
+}
+
+.hero-slider .flickity-page-dots {
+    bottom: 12%;
+}
+
+.hero-slider .flickity-page-dots .dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    opacity: 1;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.hero-slider .flickity-page-dots .dot:hover,
+.hero-slider .flickity-page-dots .dot.is-selected {
+    background: #fff;
+}
