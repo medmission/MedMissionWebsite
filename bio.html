@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Goal - MedMission</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon"
+        href="https://static.wixstatic.com/media/877939_5d2aa84ff190450291170d79060213f5~mv2.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Habibi&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kaushan+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="title"><strong>MedMission</strong></a>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li class="index"><a href="index.html">Home</a></li>
+                    <li class="goal"><a href="goal.html">Our Goal</a></li>
+                    <li class="about"><a href="about.html">About Us</a></li>
+                    <li class="contact"><a href="contact.html">Contact Us</a></li>
+                    <li class="involved"><a href="involved.html">Get Involved</a></li>
+                    <li class="recent"><a href="recent.html">Recent Trips</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="overlay" id="overlay">
+        <button id="closeBtn">&times;</button>
+        <ul id="mobile-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="goal.html">Our Goal</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="involved.html">Get Involved</a></li>
+            <li><a href="recent.html">Recent Trips</a></li>
+        </ul>
+    </div>
+
+
+    <section id="intro">
+        <div class="intro-header">
+            <h1 id="giheader">Meet Our Team</h1>
+            <p id="intro-description">The passionate minds driving our mission forward.</p>
+        </div>
+    </section>
+
+
+    <section id="leadership">
+        <div class="intro-header">
+            <h2 id="giheader">Leadership Highlight</h2>
+        </div>
+    </section>
+
+    <div class="hero-slider" carousel>
+        <div class="carousel-cell">
+            <div class="gradient"></div>
+            <div class="info-container">
+                <h1>Alice Bob</h1>
+                <p class="quote"> "Some quote hopefully not too long?" </p>
+                <p class="biotext" > Biography goes here, should change font size.</p>
+                <img class="picture" src="realpersonimg.png" alt="Person Picture">
+            </div>
+
+        </div>
+
+        <div class="carousel-cell">
+            <div class="gradient"></div>
+            <div class="info-container">
+                <h1>Charlie Derek</h1>
+                <p class="quote"> "Some quote hopefully not too long?" </p>
+                <p class="biotext" > Biography goes here, should change font size.</p>
+                <img class="picture" src="realpersonimg.png" alt="Person Picture">
+            </div>
+
+        </div>
+
+        <div class="carousel-cell">
+            <div class="gradient"></div>
+            <div class="info-container">
+                <h1>Eve Farquaad</h1>
+                <p class="quote"> "Some quote hopefully not too long?" </p>
+                <p class="biotext"> Biography goes here, should change font size.</p>
+                <img class="picture" src="realpersonimg.png" alt="Person Picture">
+            </div>
+
+        </div>
+
+        <div class="carousel-cell">
+            <div class="gradient"></div>
+            <div class="info-container">
+                <h1>Geronimo Herbert</h1>
+                <p class="quote"> "Some quote hopefully not too long?" </p>
+                <p class="biotext"> Biography goes here, should change font size.</p>
+                <img class="picture" src="realpersonimg.png" alt="Person Picture">
+            </div>
+
+        </div>
+
+        <div class="carousel-cell">
+            <div class="gradient"></div>
+            <div class="info-container">
+                <h1>Ignatius James</h1>
+                <p class="quote"> "Some quote hopefully not too long?" </p>
+                <p class="biotext"> Biography goes here, should change font size.</p>
+                <img class="picture" src="realpersonimg.png" alt="Person Picture">
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.pkgd.min.js"></script>
+    <script src="script.js"></script>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section contact-info">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>Email: <a href="mailto:medmission23@gmail.com">medmission23@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-section menu">
+                <h4>Main Menu</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="goal.html">Our Goal</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="involved.html">Get Involved</a></li>
+                    <li><a href="recent.html">Recent Trips</a></li>
+                </ul>
+            </div>
+            <div class="footer-section subscribe">
+                <h4>Subscribe</h4>
+                <p>Get the newest updates</p>
+                <form action="https://formspree.io/f/xvgpgwvr" method="post">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <button id="submission" type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-section copyright">
+                <p>&copy; 2024 MedMission. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
