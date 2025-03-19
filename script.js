@@ -141,3 +141,26 @@ document.addEventListener("DOMContentLoaded", function() {
         showSlides();
     }
 });
+
+const options = {
+    accessibility: true,
+    prevNextButtons: false,
+    pageDots: true,
+    setGallerySize: false,
+};
+
+// Function to set background position forr slides
+function setBgPosition(slide, index) {
+    const x = -(slide.target + flkty.x) / 5;
+    slides[index].style.backgroundPosition = `${x}px`;
+}
+
+// Slides initialization
+const carousel = document.querySelector('[carousel]');
+const slides = Array.from(document.getElementsByClassName('carousel-cell'));
+const flkty = new Flickity(carousel, options);
+
+// Event listener using bg position
+flkty.on('scroll', () => {
+    flkty.slides.forEach(setBgPosition);
+});
