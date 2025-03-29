@@ -164,3 +164,18 @@ const flkty = new Flickity(carousel, options);
 flkty.on('scroll', () => {
     flkty.slides.forEach(setBgPosition);
 });
+
+window.addEventListener('resize', adjustBiotext);
+
+function adjustBiotext() {
+    const element1 = document.querySelector('.picture');
+    const element2 = document.querySelector('.info-container');
+    const element3 = document.querySelector('.biotext');
+
+    const element1Width = element1.offsetWidth;
+    const element2Width = element2.offsetWidth;
+
+    element3.style.marginLeft = (element1Width + 0.03 * element2Width) + 'px';
+}
+
+adjustBiotext();
