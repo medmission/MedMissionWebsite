@@ -2090,6 +2090,8 @@ nav ul li:hover a {
     width: 100%;
     height: 90%;
     display: flex;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .hero-slider .carousel-cell .info-container {
@@ -2100,7 +2102,7 @@ nav ul li:hover a {
 }
 
 .hero-slider .carousel-cell .info-container h1 {
-    font-size: 3.2em;
+    font-size: 9vh;
     line-height: 1.0;
     margin: 0;
     padding-top: 25px;
@@ -2110,7 +2112,7 @@ nav ul li:hover a {
 
 .hero-slider .carousel-cell .info-container .quote {
     background: transparent;
-    font-size: 1em;
+    font-size: 3vh;
     font-style: italic;
     color: #fff;
     padding-top: 5px;
@@ -2120,10 +2122,9 @@ nav ul li:hover a {
 
 .hero-slider .carousel-cell .info-container .biotext {
     position: absolute;
-    font-size: 1.5em;
+    font-size: 3vh;
     line-height: 1.0;
-    padding: 3% 1% 1% 10%;
-    margin-left: 150px;
+    padding: 3% 1% 1% 0%;
     color: #000;
     text-align: center;
 }
@@ -2132,10 +2133,9 @@ nav ul li:hover a {
     position: absolute;
     padding: 2%;
     display: flex;
-    max-width: 100%;
-    max-height: 60%;
+    max-width: 35%;
+    max-height: 67%;
     object-fit: contain;
-    margin-top: 2%;
 }
 
 .flickity-button {
