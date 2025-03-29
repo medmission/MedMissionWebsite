@@ -2124,16 +2124,16 @@ nav ul li:hover a {
     position: absolute;
     font-size: 3vh;
     line-height: 1.0;
-    padding: 3% 1% 1% 0%;
+    padding: 3% 1% 1% 26%;
     color: #000;
     text-align: center;
 }
 
 .hero-slider .carousel-cell .info-container .picture {
     position: absolute;
-    padding: 2%;
+    padding: 0% 2% 0% 2%;
     display: flex;
-    max-width: 35%;
+    max-width: 25%;
     max-height: 67%;
     object-fit: contain;
 }
