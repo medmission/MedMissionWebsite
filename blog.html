@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - MedMission</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="https://static.wixstatic.com/media/877939_5d2aa84ff190450291170d79060213f5~mv2.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Habibi&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+        #blog {
+            text-align: center; /* Centers text within the blog section */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers content horizontally */
+            justify-content: center; /* Centers content vertically (optional) */
+        }
+
+        .blog-post {
+            width: 60%; /* Adjust width for better readability */
+            text-align: left; /* Aligns individual blog post text to the left */
+            margin-bottom: 20px; /* Adds spacing between posts */
+        }
+
+    
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="title"><strong>MedMission</strong></a>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="goal.html">Our Goal</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="involved.html">Get Involved</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>        
+    </header>
+    
+    <section id="blog">
+        <div class="container">
+            <br>
+            <h2 class="heading-decoration" id="blog-header">MedMission Blog</h2>
+            <p>Stay updated with our latest insights, stories, and mission updates.</p>
+            
+            <div class="blog-post">
+                <h3>Transforming Healthcare in Underserved Regions</h3>
+                <img src="image1.jpg" alt="Healthcare Mission" style="width: 100%; max-height: 400px; object-fit: cover; margin-bottom: 10px;">
+                <p class="date">Month Day, Year</p>
+                <p>Learn how MedMission is making a lasting impact by delivering essential medical supplies to remote areas...</p>
+                <a href="post1.html" class="read-more">Read More</a>
+            </div>
+            
+            <div class="blog-post">
+                <h3>Volunteering: How You Can Make a Difference</h3>
+                <video controls style="width: 100%; max-height: 400px; object-fit: cover; margin-bottom: 10px;">
+                    <source src="video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="date">Month Day, Year</p>
+                <p>Discover the various ways you can get involved with MedMission and help improve global healthcare...</p>
+                <a href="post2.html" class="read-more">Read More</a>
+            </div>
+            
+            <div class="blog-post">
+                <h3>Inside Our Latest Medical Mission</h3>
+                <img src="image2.jpg" alt="Medical Mission" style="width: 100%; max-height: 400px; object-fit: cover; margin-bottom: 10px;">
+                <p class="date">Month Day, Year</p>
+                <p>Take a behind-the-scenes look at our most recent trip and the impact it had on local communities...</p>
+                <a href="post3.html" class="read-more">Read More</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section contact-info">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>Email: <a href="mailto:medmission23@gmail.com">medmission23@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-section menu">
+                <h4>Main Menu</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="goal.html">Our Goal</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="involved.html">Get Involved</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section subscribe">
+                <h4>Subscribe</h4>
+                <p>Get the newest updates</p>
+                <form action="https://formspree.io/f/xvgpgwvr" method="post">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MedMission. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
