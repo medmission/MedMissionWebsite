@@ -10,9 +10,16 @@
         @import url('https://fonts.googleapis.com/css2?family=Habibi&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
 
         #blog {
             text-align: center; 
+            background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+            padding: 20px 0;
         }
 
         .container {
@@ -25,8 +32,79 @@
         .blog-post {
             width: 60%; 
             text-align: left; 
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             margin-top: 20px; 
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 6px 15px rgba(57, 115, 117, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid #397375;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(57, 115, 117, 0.15);
+        }
+
+        .heading-decoration {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+            color: #397375;
+        }
+
+        .heading-decoration:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 4px;
+            bottom: 0;
+            left: 25%;
+            background: linear-gradient(90deg, #397375 0%, #6ba8aa 100%);
+            border-radius: 2px;
+        }
+
+        .date {
+            color: #6c757d;
+            font-style: italic;
+        }
+
+        .read-more {
+            display: inline-block;
+            padding: 8px 20px;
+            background: linear-gradient(90deg, #397375 0%, #2d5b5d 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(57, 115, 117, 0.3);
+        }
+
+        .read-more:hover {
+            background: linear-gradient(90deg, #2d5b5d 0%, #1e4143 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(57, 115, 117, 0.4);
+        }
+
+        /* Mobile menu enhancements */
+        .overlay {
+            background: linear-gradient(135deg, #397375 0%, #1e4143 100%);
+        }
+
+        #mobile-nav li a {
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        #mobile-nav li a:hover {
+            color: #d1e7ff;
+            transform: translateX(5px);
+        }
+
+        #closeBtn {
+            color: white;
         }
     </style>
 </head>
@@ -73,7 +151,7 @@
             
             <div class="blog-post">
                 <h3>Transforming Healthcare in Nairobi, Kenya</h3>
-                <img src="image1.jpg" alt="Healthcare Mission" style="width: 100%; max-height: 400px; object-fit: cover; margin-bottom: 10px;">
+                <img src="image1.jpg" alt="Healthcare Mission" style="width: 100%; max-height: 400px; object-fit: cover; margin-bottom: 10px; border-radius: 8px;">
                 <p class="date"><b>July 2023</b></p>
                 <p>In July 2023, our dedicated team embarked on a transformative mission to Nairobi, Kenya. 
                     We delivered essential medical supplies, including medications, first aid kits, and specialized equipment, 
@@ -84,7 +162,7 @@
             
             <div class="blog-post">
                 <h3>Empowring a Children's Medical Center</h3>
-                <video controls style="width: 100%; max-height: 400px; object-fit: cover; margin-bottom: 10px;">
+                <video controls style="width: 100%; max-height: 400px; object-fit: cover; margin-bottom: 10px; border-radius: 8px;">
                     <source src="video1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -97,7 +175,7 @@
             
             <div class="blog-post">
                 <h3>Supporting a Rural Healthcare Clinic</h3>
-                <img src="image2.jpg" alt="Medical Mission" style="width: 100%; max-height: 400px; object-fit: cover; margin-bottom: 10px;">
+                <img src="image2.jpg" alt="Medical Mission" style="width: 100%; max-height: 400px; object-fit: cover; margin-bottom: 10px; border-radius: 8px;">
                 <p class="date"><b>July 2023</b></p>
                 <p>We visited a rural clinic struggling with inadequate supplies.
                     Our contribution of essential equipment and medications improved 
