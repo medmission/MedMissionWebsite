@@ -281,9 +281,9 @@ form{
     font-family: "Habibi", serif;
     text-align: center;
     font-size: 1.2vw; 
-    padding: 8.5vw;
-    padding-top: .5vh;
-    padding-bottom: .5vh;
+    padding: 12.5vw !important;
+    padding-top: .5vh !important;
+    padding-bottom: .5vh !important;
 }
 
 #sendmessage {
