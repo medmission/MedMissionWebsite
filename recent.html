@@ -9,6 +9,27 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Habibi&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+         .heading-decoration {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+            color: black; 
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 50px;
+        }
+
+        .heading-decoration:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 4px;
+            bottom: 0;
+            left: 25%;
+            background: linear-gradient(90deg, #397375 0%, #6ba8aa 100%);
+            border-radius: 2px;
+            font-family: 'Montserrat', sans-serif; 
+        }
     </style>
 </head>
 <body>
@@ -48,7 +69,7 @@
     <section id="recent-trips">
         <div class="container">
             <br>
-            <h2 class="heading-decoration" id="recenth">Our Most Recent Trip</h2>
+            <h2 class="heading-decoration" id="goalh">Our Most Recent Trip</h2>
             <div class="mission-overview">
                 <img class="highlight-img" src="https://static.wixstatic.com/media/877939_60cbf523247b4a34a064021c9ed0b943~mv2.png/v1/fit/w_3060,h_1682,q_90/877939_60cbf523247b4a34a064021c9ed0b943~mv2.webp" alt="Medical supplies being packed">
                 <div class="overview-text">
