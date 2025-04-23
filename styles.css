@@ -2063,6 +2063,33 @@ nav ul li:hover a {
     margin-left: 190vw;
 }
 
+.bioIntro {
+    margin: 0;
+    padding: 0;
+}
+
+.bioIntro h1 {
+    font-size: 5vw;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 0;
+    color: #000000;
+}
+
+.bioIntro h2 {
+    font-size: clamp(2.5rem, 4vw, 3rem);
+    font-weight: 650;
+    margin-bottom: 1rem;
+    font-family: "Montserrat", sans-serif;
+    color: #000000;
+}
+
+.bioIntro p {
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-weight: 350;
+    margin-bottom: 0;
+    font-family: "Montserrat", sans-serif;
+    color: #000000;
+}
 .gradientbio {
     position: absolute;
     width: 100%;
@@ -2097,17 +2124,17 @@ nav ul li:hover a {
 }
 
 .hero-slider .carousel-cell .info-container h1 {
-    font-size: 9vh;
+    font-size: clamp(4rem,9vh, 6rem);
     line-height: 1.0;
     margin: 0;
-    padding-top: 25px;
+    padding-top: 3%;
     color: #fff;
     text-align: center;
 }
 
 .hero-slider .carousel-cell .info-container .quote {
     background: transparent;
-    font-size: 3vh;
+    font-size: clamp(1rem,2.5vh,2rem);
     font-style: italic;
     color: #fff;
     padding-top: 5px;
@@ -2117,9 +2144,9 @@ nav ul li:hover a {
 
 .hero-slider .carousel-cell .info-container .biotext {
     position: absolute;
-    font-size: 3vh;
+    font-size: clamp(1rem,2.9vh,2rem);
     line-height: 1.0;
-    padding: 3% 1% 1% 26%;
+    padding: 3% 6% 1% 26%;
     color: #000;
     text-align: center;
 }
@@ -2131,6 +2158,7 @@ nav ul li:hover a {
     max-width: 25%;
     max-height: 67%;
     object-fit: contain;
+    border-radius: 3rem;
 }
 
 .flickity-button {
@@ -2154,3 +2182,128 @@ nav ul li:hover a {
 .hero-slider .flickity-page-dots .dot.is-selected {
     background: #fff;
 }
+
+.grid-wrapper {
+    background-color: #2e8a574f;
+    border-radius: 10px;
+    margin: 0 5% 5% 5%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.grid-container {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.grid-sizer {
+    width: calc(33.33% - 14px);
+}
+
+.card {
+    margin-bottom: 2%;
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(33.33% - 14px);
+    box-sizing: border-box;
+}
+
+.card-content {
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-pic {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    display: block;
+}
+
+.card .info {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+    color: white;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.card .name {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card .departments {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.9rem;
+}
+
+
+.card .country {
+    color: rgba(255, 255, 255, 0.750);
+    font-size: 0.9rem;
+}
+.card .bio {
+    color: white;
+    display: none;
+    font-size: clamp(0.8rem, 2vh, 2.5rem);
+    margin-top: 3px;
+}
+
+.card:hover .profile-pic {
+    filter: grayscale(100%);
+    transform: scale(1.05);
+}
+
+.card:hover .bio {
+    display: block;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .grid-sizer,
+    .card {
+      width: 48%;
+    }
+    .card .name {
+      font-size: 1.2rem;
+    }
+    .card .departments {
+      font-size: 0.8rem;
+    }
+    .card .bio {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .grid-sizer,
+    .card {
+      width: 100%;
+    }
+    .card .name {
+      font-size: 1rem;
+    }
+    .card .departments {
+      font-size: 0.7rem;
+    }
+    .card .bio {
+      font-size: 0.8rem;
+    }
+  }
