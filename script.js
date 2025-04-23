@@ -165,3 +165,49 @@ flkty.on('scroll', () => {
     flkty.slides.forEach(setBgPosition);
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const grid = document.getElementById('grid');
+
+    memberbios.forEach(member => {
+        const card = document.createElement('div');
+        card.classList.add('card');
+
+        card.innerHTML = `
+            <div class="card-content">
+                <img class="profile-pic" src="${member.image}" alt="${member.name}" loading="lazy" />
+                <div class="info">
+                    <h3 class="name">${member.name}</h3>
+                    <p class="country">${member.country}</p>
+                    <p class="departments">${member.departments}</p>
+                    <p class="bio">${member.bio}</p>
+                </div>
+            </div>
+        `;
+        grid.appendChild(card);
+    });
+
+    const msnry = new Masonry(grid, {
+        itemSelector: '.card',
+        columnWidth: '.grid-sizer',
+        percentPosition: true,
+        gutter: 20,
+        fitWidth: true,
+        transitionDuration: 0
+    });
+
+    imagesLoaded(grid, () => {
+        msnry.layout();
+    });
+
+    let resizeTimeout;
+    const handleResize = () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            msnry.reloadItems();
+            msnry.layout();
+        }, 100);
+    };
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('orientationchange', handleResize);
+});
+
