@@ -95,6 +95,6 @@ const memberbios = [
         bio: "Sahil, a high school student passionate about science, leads Project MedMission to drive innovative health solutions. He connects with communities to share knowledge, aiming to improve lives globally. With his expanding team, Sahil plans to repurpose over $100,000 in unused medications for impactful causes.",
         departments: "Chapter Founder, Website Developer, Website Designer, Finance, Social Media, Outreach and Recruiting, Secretary, Editor",
         country: "USA",
-        image: "./MemberPhotos/No_Picture.png"
+        image: "./MemberPhotos/Sahil_Patel.jpg"
     }
 ];
