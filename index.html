@@ -15,108 +15,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kaushan+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        .section {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-            will-change: opacity, transform;
-        }
-
-        .section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        #hero {
-            transition-delay: 0.1s;
-        }
-
-        #establishments {
-            transition-delay: 0.2s;
-        }
-
-        #slideshow-section {
-            transition-delay: 0.3s;
-        }
-
-        #hih {
-            transition-delay: 0.4s;
-        }
-
-        #faq {
-            transition-delay: 0.5s;
-        }
-        
-        img {
-            transition: opacity 0.4s ease;
-        }
-
-        img[data-src] {
-            opacity: 0;
-        }
-
-        img.loaded {
-            opacity: 1;
-        }
-    </style>
-    <script>
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set up the observer
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        
-                        // For lazy loading images
-                        const lazyImages = entry.target.querySelectorAll('img[data-src]');
-                        lazyImages.forEach(img => {
-                            img.src = img.getAttribute('data-src');
-                            img.onload = () => {
-                                img.classList.add('loaded');
-                            };
-                        });
-                    }
-                });
-            }, observerOptions);
-            
-            const sections = document.querySelectorAll('.section, #hih');
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-
-            const images = document.querySelectorAll('img');
-            images.forEach(img => {
-                if (!img.src) {
-                    img.setAttribute('data-src', img.getAttribute('src'));
-                    img.removeAttribute('src');
-                }
-            });
-
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        window.scrollTo({
-                            top: target.offsetTop - 100,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </head>
 <body>
     <div id="donation-banner">
@@ -161,7 +60,7 @@
             <li><a href="bio.html">Team Bios</a></li>
         </ul>
     </div>
-    <section id="hero" class="hero section">
+    <section id="hero" class="hero">
         <div class="container">
             <div id="maincover">
                 <h1 id="main-header">Welcome To MedMission</h1>
@@ -174,7 +73,7 @@
         </div>
     </section>
     <section class="section" id="establishments">
-        <img id="MapofDistribution" data-src="MAP NEW.jpg" alt="Map of Distribution">
+        <img id="MapofDistribution" src="MAP NEW.jpg" alt="Map of Distribution">
       <div id="estinline">
        <div id="one" class="est">
         <h3 class="est3">Estimated Cost of Donations</h3>
@@ -194,42 +93,42 @@
         <div class="slideshow-container">
             <div class="mySlides fade">
                 <div class="numbertext">1 / 8</div>
-                <img data-src="main1.jpeg" id="image1" class="slide-image" alt="Trip To Kenya">
+                <img src="main1.jpeg" id="image1" class="slide-image" alt="Trip To Kenya">
                 <div class="text">Trip To Kenya</div>
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">2 / 8</div>
-                <img data-src="img1.jpg" id="image2" class="slide-image" alt="Meeting the Kids">
+                <img src="img1.jpg" id="image2" class="slide-image" alt="Meeting the Kids">
                 <div class="text">Meeting the Kids</div>
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">3 / 8</div>
-                <img data-src="img2.jpg" id="image3" class="slide-image" alt="Learning About the Kids">
+                <img src="img2.jpg" id="image3" class="slide-image" alt="Learning About the Kids">
                 <div class="text">Helping the Kids</div>
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">4 / 8</div>
-                <img data-src="img3.jpg" id="image4" class="slide-image" alt="At the Medical Center">
+                <img src="img3.jpg" id="image4" class="slide-image" alt="At the Medical Center">
                 <div class="text">At the Medical Center</div>
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">5 / 8</div>
-                <img data-src="nc34.jpg" id="image5" class="slide-image" alt="Trip to North Carolina (Hurricane Helene)">
+                <img src="nc34.jpg" id="image5" class="slide-image" alt="Trip to North Carolina (Hurricane Helene)">
                 <div class="text">Trip to North Carolina (Hurrican Helene)</div>
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">6 / 8</div>
-                <img data-src="nc46.jpg" id="image6" class="slide-image" alt="Devestated Buildings">
+                <img src="nc46.jpg" id="image6" class="slide-image" alt="Devestated Buildings">
                 <div class="text">Devestated Buildings</div>
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">7 / 8</div>
-                <img data-src="nc19.jpg" id="image7" class="slide-image" alt="Wrecked Cars">
+                <img src="nc19.jpg" id="image7" class="slide-image" alt="Wrecked Cars">
                 <div class="text">Wrecked Cars</div>
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">8 / 8</div>
-                <img data-src="nc43.jpg" id="image8" class="slide-image" alt="Supplies to Help Those in Need">
+                <img src="nc43.jpg" id="image8" class="slide-image" alt="Supplies to Help Those in Need">
                 <div class="text">Supplies to Help Those in Need</div>
             </div>
         </div>
@@ -246,25 +145,25 @@
         </div>
     </section>
      
-    <section id="hih" class="section">
-        <img id="behind" data-src="https://www.iqviamedicalsalescareers.com/img/f9d62769-d496-442f-5370-08da8113e407" alt="indexfill">
+    <section id="hih">
+        <img id="behind" src="https://www.iqviamedicalsalescareers.com/img/f9d62769-d496-442f-5370-08da8113e407" alt="indexfill">
      <div id="hihcontent">   
         <h2>How it Happens</h2>
         <hr id="hihhr">
         <p id="hihmp">This is the behind-the-scenes process that takes place every time we collect new<br>medications or supplies.</p>
       <div class="inlinehih">
        <div class="hihdown">   
-        <img class="hihimg" data-src="collectionmed.png" alt="Collection">
+        <img class="hihimg" src="collectionmed.png" alt="Collection">
         <h4>Collection</h4>
         <p class="hihp">It starts with us contacting medical offices. We also reach out to clinics for supplies. Once they agree to help our cause, we proceed. We arrange a time for collection. Our team then gathers the supplies. This collaborative effort ensures we have what we need.</p>
        </div>
        <div class="hihdown"> 
-        <img class="hihimg" data-src="inventorymed.png" alt="Inventory">
+        <img class="hihimg" src="inventorymed.png" alt="Inventory">
         <h4>Inventory</h4>
         <p class="hihp">We check the expiration date on each medication. This ensures they are within the guidelines of the medical mission. We also verify compliance with the area's donation guidelines. Every medication is inspected thoroughly. This process helps maintain safety and effectiveness. Our careful review ensures all donations meet the required standards.</p>
        </div>
        <div class="hihdown">
-        <img class="hihimg" data-src="delivermed.png" alt="Distribution">
+        <img class="hihimg" src="delivermed.png" alt="Distribution">
         <h4>Distribution</h4>
         <p class="hihp">We donate the supplies to different missions. These missions then distribute the items to underdeveloped regions. Another option is for us to deliver those supplies firsthand. We visit villages and areas in need. This allows us to directly see the impact. It also ensures the supplies reach their intended destination.</p>
        </div>
@@ -308,7 +207,7 @@
                 <button class="accordion-button">Is MedMission a registered 501(c)(3) nonprofit?</button>
                 <div class="accordion-content">
                     <p>Yes, Project MedMission is a registered 501(c)(3) nonprofit organization. You can find us by searching for "Project MedMission" on Sunbiz.org, the official State of Florida website for businesses and nonprofits.</p>
-                    <img data-src="ACFrOgC4jAH3l9fq1kNhBzRB92ZQp0PGSuibHwqmiQToF856Oa1VWBe9q4Z3jUPs1GqDb-n3rKu8dfsyOzlBEi-xLalbjd4e1-48A5lEigAY4xlGbYZxjQEz202CEf1ARV57TMyHsx-Ut7V7lNP8.jpg" class="accordion-image">
+                    <img src="ACFrOgC4jAH3l9fq1kNhBzRB92ZQp0PGSuibHwqmiQToF856Oa1VWBe9q4Z3jUPs1GqDb-n3rKu8dfsyOzlBEi-xLalbjd4e1-48A5lEigAY4xlGbYZxjQEz202CEf1ARV57TMyHsx-Ut7V7lNP8.jpg" class="accordion-image">
                 </div>
             </div>            
             </div>
