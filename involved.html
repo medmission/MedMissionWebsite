@@ -13,6 +13,44 @@
         @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kaushan+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
     <script src="script.js"></script>
+    <style>
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    .section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    
+    .section.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    #hero { transition-delay: 0.1s; }
+    #establishments { transition-delay: 0.2s; }
+    #slideshow-section { transition-delay: 0.3s; }
+    #hih { transition-delay: 0.4s; }
+    #faq { transition-delay: 0.5s; }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section, #hih').forEach(section => {
+            observer.observe(section);
+        });
+    });
+</script>
     </head>
     <body>
        <header>
