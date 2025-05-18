@@ -30,6 +30,72 @@
             opacity: 1;
             transform: translateY(0);
         }
+        
+        .theme-toggle-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        #theme-toggle {
+            background: var(--bg-color);
+            color: var(--text-color);
+            border: 2px solid var(--text-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        #theme-toggle:hover {
+            transform: scale(1.1);
+        }
+        
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-bg: #f8f9fa;
+            --footer-bg: #343a40;
+            --footer-text: #f8f9fa;
+            --accent-color: #007bff;
+            --card-bg: #ffffff;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+        
+        [data-theme="dark"] {
+            --bg-color: #121212;
+            --text-color: #f8f9fa;
+            --header-bg: #1a1a1a;
+            --footer-bg: #121212;
+            --footer-text: #f8f9fa;
+            --accent-color: #0d6efd;
+            --card-bg: #1e1e1e;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+        
+        header {
+            background-color: var(--header-bg);
+            transition: background-color 0.5s ease;
+        }
+        
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+        
+        .accordion-item, .est {
+            background-color: var(--card-bg);
+            transition: background-color 0.5s ease;
+        }
     
     #hero { transition-delay: 0.1s; }
     #establishments { transition-delay: 0.2s; }
@@ -68,6 +134,11 @@
             </nav>
        </div>
        </div> 
+   </div>
+     </div> 
+     <div class="theme-toggle-container">
+       <button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+    </div>
    </header>
    <div class="overlay" id="overlay">
         <button id="closeBtn">&times;</button>
@@ -311,6 +382,32 @@
         }, { threshold: 0.1 });
 
         observer.observe(document.getElementById('establishments'));
+
+       const themeToggle = document.getElementById('theme-toggle');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
+            document.body.setAttribute('data-theme', 'dark');
+            themeToggle.textContent = '🌞';
+        } else {
+            document.body.setAttribute('data-theme', 'light');
+            themeToggle.textContent = '🌙';
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.body.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                document.body.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                themeToggle.textContent = '🌙';
+            } else {
+                document.body.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                themeToggle.textContent = '🌞';
+            }
+        });
+
     </script>
 </body>
 </html>
