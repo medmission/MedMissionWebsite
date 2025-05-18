@@ -99,15 +99,15 @@
       <div id="estinline">
        <div id="one" class="est">
         <h3 class="est3">Estimated Cost of Donations</h3>
-        <h5 class="est5">$135,947.15</h5>
+        <h5 class="est5" id="cost-counter">$0</h5>
        </div>
        <div id="two" class="est"> 
         <h3 class="est3">Supplies Donated</h3>
-        <h5 class="est5">6,702</h5>
+        <h5 class="est5" id="supplies-counter">0</h5>
        </div> 
        <div id="three" class="est"> 
         <h3 class="est3">Countries Donated To</h3>
-        <h5 class="est5">8</h5>
+        <h5 class="est5" id="countries-counter">0</h5>
        </div> 
       </div> 
     </section>
@@ -283,6 +283,34 @@
             observer.observe(section);
         });
     });
+
+        function animateValue(id, start, end, duration, prefix = '') {
+            const obj = document.getElementById(id);
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const value = Math.floor(progress * (end - start) + start);
+                obj.innerHTML = prefix + value.toLocaleString();
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateValue('cost-counter', 0, 135947, 2000, '$');
+                    animateValue('supplies-counter', 0, 6702, 2000);
+                    animateValue('countries-counter', 0, 8, 1000);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        observer.observe(document.getElementById('establishments'));
     </script>
 </body>
 </html>
