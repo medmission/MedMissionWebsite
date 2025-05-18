@@ -13,44 +13,6 @@
         @import url('https://fonts.googleapis.com/css2?family=Habibi&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kaushan+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
-    <style>
-    html {
-        scroll-behavior: smooth;
-    }
-    
-    .section {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    
-    .section.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    
-    #hero { transition-delay: 0.1s; }
-    #establishments { transition-delay: 0.2s; }
-    #slideshow-section { transition-delay: 0.3s; }
-    #hih { transition-delay: 0.4s; }
-    #faq { transition-delay: 0.5s; }
-</style>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.section, #hih').forEach(section => {
-            observer.observe(section);
-        });
-    });
-</script>
 </head>
 
 <body>
@@ -110,10 +72,12 @@
         <div class="carousel-cell">
             <div class="gradientbio"></div>
             <div class="info-container">
+                <img class="picture" src="/MemberPhotos/Krishiv_Patel.png" alt="Person Picture">
                 <h1>Krishiv Patel</h1>
                 <p class="quote"> Founder </p>
-                <p class="biotext"> Krishiv is a young scholar from Florida that wants to make an impact in the world. As he continues to positively impact society in many ways, he is also joining many initiatives to boost help in underprivileged areas.</p>
-                <img class="picture" src="/MemberPhotos/Krishiv_Patel.jpg" alt="Person Picture">
+                <p class="biotext"> Krishiv is a young scholar from Florida that wants to make an impact in the world.
+                    As he continues to positively impact society in many ways, he is also joining many initiatives to
+                    boost help in underprivileged areas.</p>
             </div>
 
         </div>
@@ -121,10 +85,13 @@
         <div class="carousel-cell">
             <div class="gradientbio"></div>
             <div class="info-container">
+                <img class="picture" src="/MemberPhotos/Sahil_Patel.jpg" alt="Person Picture">
                 <h1>Sahil Patel</h1>
                 <p class="quote"> Founder </p>
-                <p class="biotext"> Sahil, a high school student passionate about science, leads Project MedMission to drive innovative health solutions. He connects with communities to share knowledge, aiming to improve lives globally. With his expanding team, Sahil plans to repurpose over $100,000 in unused medications for impactful causes.</p>
-                <img class="picture" src="/MemberPhotos/Sahil_Patel.jpg" alt="Person Picture">
+                <p class="biotext"> Sahil, a high school student passionate about science, leads Project MedMission to
+                    drive innovative health solutions. He connects with communities to share knowledge, aiming to
+                    improve lives globally. With his expanding team, Sahil plans to repurpose over $100,000 in unused
+                    medications for impactful causes.</p>
             </div>
 
         </div>
@@ -132,10 +99,12 @@
         <div class="carousel-cell">
             <div class="gradientbio"></div>
             <div class="info-container">
+                <img class="picture" src="/MemberPhotos/Daniel_Soloshchenko.jpeg" alt="Person Picture">
                 <h1>Daniel Soloshchenko</h1>
                 <p class="quote"> President of Finance </p>
-                <p class="biotext"> A young and innovative entrepreneur and budding engineer, Daniel aims to create a future of collaboration between companies to ensure a brighter and better future, free of financial burdens, starting with Project MedMission.</p>
-                <img class="picture" src="/MemberPhotos/Daniel_Soloshchenko.jpeg" alt="Person Picture">
+                <p class="biotext"> A young and innovative entrepreneur and budding engineer, Daniel aims to create a
+                    future of collaboration between companies to ensure a brighter and better future, free of financial
+                    burdens, starting with Project MedMission.</p>
             </div>
 
         </div>
@@ -143,10 +112,12 @@
         <div class="carousel-cell">
             <div class="gradientbio"></div>
             <div class="info-container">
+                <img class="picture" src="/MemberPhotos/Ayush_Vasireddy.png" alt="Person Picture">
                 <h1>Ayush Vasireddy</h1>
                 <p class="quote"> President of Outreach </p>
-                <p class="biotext"> Ayush Vasireddy is a sophomore, and is very passionate about science, hoping to pursue a career in neuroscience or biology. He is actively involved in scientific research, and in his free time enjoys playing tennis with his friends.</p>
-                <img class="picture" src="/MemberPhotos/Ayush_Vasireddy.png" alt="Person Picture">
+                <p class="biotext"> Ayush Vasireddy is a sophomore, and is very passionate about science, hoping to
+                    pursue a career in neuroscience or biology. He is actively involved in scientific research, and in
+                    his free time enjoys playing tennis with his friends.</p>
             </div>
 
         </div>
@@ -154,14 +125,18 @@
         <div class="carousel-cell">
             <div class="gradientbio"></div>
             <div class="info-container">
+                <img class="picture" src="/MemberPhotos/Krishna_Reddy.jpg" alt="Person Picture">
                 <h1>Krishna Reddy</h1>
                 <p class="quote"> Vice President of Social Media </p>
-                <p class="biotext"> Krishna is a passionate and dedicated individual, committed to innovation and meaningful impact. With creativity and determination, Krishna embodies the spirit of compassion and progress.</p>
-                <img class="picture" src="/MemberPhotos/Krishna_Reddy.jpg" alt="Person Picture">
+                <p class="biotext"> Krishna is a passionate and dedicated individual, committed to innovation and
+                    meaningful impact. With creativity and determination, Krishna embodies the spirit of compassion and
+                    progress.</p>
             </div>
 
         </div>
     </div>
+
+    <br> <br> <br>
 
     <section id="members">
         <div class="bioIntro">
@@ -174,7 +149,7 @@
             <div class="grid-sizer"></div>
         </div>
     </div>
-    
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.pkgd.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
