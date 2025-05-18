@@ -2106,11 +2106,12 @@ nav ul li:hover a {
     width: 80%;
     height: 65vh;
     overflow: hidden;
+    position: relative;
 }
 
 .hero-slider .carousel-cell {
     width: 100%;
-    height: 90%;
+    height: 100%;
     display: flex;
     border-radius: 15px;
     overflow: hidden;
@@ -2124,49 +2125,48 @@ nav ul li:hover a {
 }
 
 .hero-slider .carousel-cell .info-container h1 {
-    font-size: clamp(4rem,9vh, 6rem);
+    font-size: clamp(3.3rem, 7vh, 5rem);
     line-height: 1.0;
     margin: 0;
     padding-top: 3%;
+    padding-left: 36%;
     color: #fff;
     text-align: center;
 }
 
 .hero-slider .carousel-cell .info-container .quote {
     background: transparent;
-    font-size: clamp(1rem,2.5vh,2rem);
+    font-size: clamp(1rem, 2.5vh, 2rem);
     font-style: italic;
     color: #fff;
     padding-top: 5px;
+    padding-left: 36%;
     text-align: center;
 
 }
 
 .hero-slider .carousel-cell .info-container .biotext {
     position: absolute;
-    font-size: clamp(1rem,2.9vh,2rem);
+    font-size: clamp(1rem, 2.9vh, 2rem);
     line-height: 1.0;
-    padding: 3% 6% 1% 26%;
+    padding: 3% 6% 1% 41%;
     color: #000;
     text-align: center;
 }
 
 .hero-slider .carousel-cell .info-container .picture {
     position: absolute;
-    padding: 0% 2% 0% 2%;
+    padding: 1% 2% 1% 3%;
+    margin-left: 2%;
     display: flex;
-    max-width: 25%;
-    max-height: 67%;
+    max-height: 96%;
     object-fit: contain;
     border-radius: 3rem;
 }
 
-.flickity-button {
-    display: none;
-}
 
 .hero-slider .flickity-page-dots {
-    bottom: 12%;
+    bottom: 1%;
 }
 
 .hero-slider .flickity-page-dots .dot {
@@ -2181,6 +2181,32 @@ nav ul li:hover a {
 .hero-slider .flickity-page-dots .dot:hover,
 .hero-slider .flickity-page-dots .dot.is-selected {
     background: #fff;
+}
+
+.hero-slider .flickity-prev-next-button {
+    position: absolute;
+    background: transparent;
+    width: 4%;
+    height: 4%;
+    border: none;
+}
+
+
+
+.hero-slider .flickity-prev-next-button:disabled {
+    display: none;
+}
+
+.hero-slider .flickity-prev-next-button .arrow {
+    fill: #fff;
+    width: 3%;
+    height: 3%;
+}
+
+.hero-slider .flickity-prev-next-button.no-svg {
+    color: white;
+    width: 3%;
+    height: 3%;
 }
 
 .grid-wrapper {
