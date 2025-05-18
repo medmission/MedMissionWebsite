@@ -4,7 +4,7 @@ const memberbios = [
         bio: "Krishiv is a young scholar from Florida that wants to make an impact in the world. As he continues to positively impact society in many ways he is also joining many initiatives to boost help in underprivileged areas.",
         departments: "Chapter Founder, Website Developer, Website Designer, Outreach and Recruiting",
         country: "USA",
-        image: "./MemberPhotos/No_Picture.png"
+        image: "./MemberPhotos/Krishiv_Patel.png"
     },
     {
         name: "Annika Acharya",
