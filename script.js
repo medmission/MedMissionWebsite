@@ -144,7 +144,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 const options = {
     accessibility: true,
-    prevNextButtons: false,
     pageDots: true,
     setGallerySize: false,
 };
